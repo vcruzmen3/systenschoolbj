@@ -1,0 +1,49 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    disable-swagger-default-url: true
+  packages-to-scan: com.school.school_management_api
+
+spring:
+  application:
+    name: school-management-api
+
+  # Base de Datos (SQL Server)
+  datasource:
+    url: jdbc:sqlserver://localhost;instanceName=SA;databaseName=SchoolManagementJDb;encrypt=false;trustServerCertificate=true
+    username: sa
+    password: 123
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  # ORM / JPA / Hibernate
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
+        format_sql: true
+
+  # Apache Kafka (Productor)
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE

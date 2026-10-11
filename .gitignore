@@ -1,0 +1,55 @@
+### Java / Compilados ###
+*.class
+*.log
+*.ctxt
+.mtj.tmp/
+
+### Maven / Gradle ###
+target/
+build/
+.gradle/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse / STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code & Otros Editores ###
+.vscode/
+*.swp
+*.swo
+
+### Sistemas Operativos (macOS / Windows / Linux) ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+### Documentación / Varios ###
+HELP.md
